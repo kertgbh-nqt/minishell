@@ -6,7 +6,7 @@
 /*   By: mel-garr <mel-garr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:44:40 by mel-garr          #+#    #+#             */
-/*   Updated: 2023/05/03 16:23:41 by mel-garr         ###   ########.fr       */
+/*   Updated: 2023/05/04 03:54:10 by mel-garr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ int cmd_echo(char **str)
         i++;
         signe = 1;
     }
-    print_args(str, i);
+    if (str[i])
+        print_args(str, i);
     if (signe == 0)
         write(1, "\n", 1);
     return (0);
